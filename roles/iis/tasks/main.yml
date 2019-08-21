@@ -1,0 +1,9 @@
+---
+  - name: Test Task
+    win_ping:
+    register: ping_result
+  
+  - name: Debug
+    debug:        
+        var: ping_result
+        

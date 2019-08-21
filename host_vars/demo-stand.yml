@@ -1,0 +1,4 @@
+---
+  ansible_host: X.X.X.X
+  ansible_user: domain\user
+  ansible_password: 'password'
