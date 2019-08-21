@@ -1,8 +1,8 @@
 # ansible.demo
 
-[TOC]
+## Why this repository
 
-
+This is just a demo project for ansible, to show up basic concepts. It can be use as a start point for new projects and as example.
 
 ## Folder structure
 
@@ -30,4 +30,26 @@
 
 - demo-playbook.yml // ansible playbook
 
-  
+
+## How to run demo
+
+1. Check-out this repository to some folder
+
+   ```bash
+   git clone https://github.com/leechdraw/ansible.demo.git
+   ```
+
+   
+
+2. Install Ansible ([instruction](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html))
+
+3. Edit [demo-stand.yml](https://github.com/leechdraw/ansible.demo/blob/master/host_vars/demo-stand.yml)
+
+4. Run next command
+
+   ```bash
+   cd <rep-folder>/
+   ansible-playbook -i demo_inventory demo-playbook.yml
+   ```
+
+   
