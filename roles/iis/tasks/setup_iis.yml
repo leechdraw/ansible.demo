@@ -1,0 +1,24 @@
+---
+  - name: Setup Features
+    win_feature:
+      name:
+      - Web-Windows-Auth
+      - Web-Mgmt-Service
+      - Web-App-Dev    
+      - Web-Net-Ext45
+      - Web-AppInit    
+      - Web-Asp-Net45
+      - Web-ISAPI-Ext
+      - Web-ISAPI-Filter
+      - Web-WebSockets
+      state: present
+  
+  - name: PowerShell Example
+    win_shell: |
+      $list = ls c:\data_from_ansible\
+      $list
+    register: ps_data
+  
+  - debug:
+      var: ps_data
+    

@@ -6,4 +6,17 @@
   - name: Debug
     debug:        
         var: ping_result
-        
+  
+  - name: Create folder
+    win_file:
+        path: c:\data_from_ansible
+        state: directory 
+
+  - name: Copy Secret file
+    win_copy:
+        src: some.secret.file.txt
+        dest: c:\data_from_ansible\
+  
+  - name: Setup IIS 
+    include_tasks: setup_iis.yml
+
